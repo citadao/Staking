@@ -50,7 +50,7 @@ contract RewardsHolder {
     function sendRewardtoStakingContract() public {
         require(msg.sender==RelayerAddress,'Not Relayer');
         require(RewardRate*10**18<=RewardToken.balanceOf(address(this)));  //10**18 to account for decimals
-        RewardToken.transfer(StakingContract, RewardRate);
+        RewardToken.transfer(StakingContract, RewardRate*10**18);
   }
 
 
