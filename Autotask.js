@@ -20,7 +20,7 @@ exports.handler =  function(credentials) {                       //Get the crede
 }
 
 exports.main = async function(signer) {
-    const ContractAddress='0x4A5B063A89a543537d8Cfbc3a705Ff4edBd01020';           //RewardsHolder Contract Address
+    const ContractAddress='0xC003a84217DD703a503eF3dC33de3A4B649d5975';           //RewardsHolder Contract Address
   	const instance = new ethers.Contract(ContractAddress, Holder_ABI, signer);
 
  	try {  const SendTX = await instance.sendRewardtoStakingContract();
