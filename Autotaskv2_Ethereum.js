@@ -39,8 +39,8 @@ exports.handler =  function(credentials) {
 exports.main = async function(signer) {
     const KNIGHTContractAddress='0x3541A5C1b04AdABA0B83F161747815cd7B1516bC';           //KNIGHT Contract Address on Ethereum 
     const instance = new ethers.Contract(KNIGHTContractAddress, ERC20_ABI, signer);
-    const RewardRate = ethers.utils.parseUnits('100');                                 //eg. 100 KNIGHT tokens as the RewardRate
-    const StakingContractAddress = 'Insert Address Here';                     //Staking Contract Address on Ethereum 
+    const RewardRate = ethers.utils.parseUnits('////Insert Reward Amount Here////');    //eg. 100 KNIGHT tokens as the RewardRate
+    const StakingContractAddress = '////Insert Address Here////';                     //Staking Contract Address on Ethereum 
  
 	try {  const SendTX = await instance.transfer(StakingContractAddress,RewardRate);   //Transfer KNIGHT to the Staking Contract on Rinkeby
 				return SendTX;
