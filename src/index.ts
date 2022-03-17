@@ -25,7 +25,7 @@ type EnvInfo = {
 
 // To run locally (this code will not be executed in Autotasks)
 if (require.main === module) {
-  require("dotenv").config();
+  require("dotenv").config({ path: ".env.secrets" });
   const { API_KEY: apiKey, API_SECRET: apiSecret } = process.env as EnvInfo;
   handler({ apiKey, apiSecret })
     .then(() => process.exit(0))
