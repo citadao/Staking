@@ -4,12 +4,25 @@ Builds script run by an OpenZeppelin Autotask to invoke a Relayer.
 
 ## Build
 
+Install dependencies:
+
 ```
 yarn
+```
+
+Build and bundle:
+
+```
 yarn build
 ```
 
 Build config is stored in the `.env.mainnet` and `.env.rinkeby` files. You can select which file to use by specifying the NETWORK env variable on build:
+
+To build for rinkeby:
+
+```
+NETWORK=rinkeby yarn build
+```
 
 To build for mainnet:
 
@@ -17,7 +30,7 @@ To build for mainnet:
 NETWORK=mainnet yarn build
 ```
 
-The output of the file will be in `dist/index.js`.
+The output of the file will be in `dist/index.js`. This is what you'll use in the autotask.
 
 ## Running Locally
 
