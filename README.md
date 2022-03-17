@@ -29,3 +29,9 @@ API_SECRET=yourapisecret
 ```
 
 Then run `yarn start`, which will run the built js code using `node`, and connecting to your Defender Relayer via the HTTP API.
+
+Alternatively, just include the vars in your command line:
+
+```
+API_KEY=yourapikey API_SECRET=yourapisecret yarn start
+```
