@@ -16,7 +16,7 @@ Build and bundle:
 yarn build
 ```
 
-Build config is stored in the `.env.mainnet` and `.env.rinkeby` files. You can select which file to use by specifying the NETWORK env variable on build:
+The above defaults to using the rinkeby config. Build config is stored in the `.env.mainnet` and `.env.rinkeby` files. You can select which file to use by specifying the NETWORK env variable on build:
 
 To build for rinkeby:
 
